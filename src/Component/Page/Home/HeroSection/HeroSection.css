@@ -1,0 +1,121 @@
+.hero-section {
+    position: relative;
+    height: 300px;
+    background-image: url('https://ptscoffee.com/cdn/shop/files/Santa_Ana_cherries_banner.jpg?v=1678910870');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    padding: 50px 50px;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 600px;
+    text-align: right;
+    position: relative;
+    z-index: 2; 
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.hero-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-button:hover {
+    background-color:  #03065f;
+    color: white;
+}
+@media (max-width: 991px) {
+    .hero-section {
+        height: 250px;
+        padding: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        gap: 8px;
+    }
+
+    .hero-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        height: 200px;
+        padding: 20px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hero-button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        display: none;
+    }
+}
